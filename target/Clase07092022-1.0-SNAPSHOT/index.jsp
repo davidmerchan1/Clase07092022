@@ -12,7 +12,7 @@
         <title>Pagina 1</title>
     </head>
     <body>
-        <h1>Hello mundo crueñ</h1>
+        <h1>David Merchan</h1>
         <a href="Control"> Verificar Servlet objeto response</a>
         <form action="Control" method="get">
             <label>
