@@ -19,7 +19,7 @@
     <form name="form" action="Control" method="get">
     <div class="formulario">
 
-    <h1>David Merchan</h1>
+    <h1>David Merchan // :) </h1>
 
      <div class="contenedor">
  
