@@ -57,17 +57,20 @@ public class Control extends HttpServlet {
             throws ServletException, IOException {
         //processRequest(request, response);
         String n= request.getParameter("txt_nombres");
-        String a=request.getParameter("txt_apellidos");
+        String t=request.getParameter("txt_telefono");
+        String c=request.getParameter("txt_correo");
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>respuesta 1</title>");            
+            out.println("<title>Respuestas</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>El domicilio llego: "+n+" "+a+"</h1>");
+            out.println("<h1>Nombre: "+n+"</h1>");
+            out.println("<h1>Telefono: "+t+"</h1>");
+            out.println("<h1>Correo: "+c+"</h1>");
             out.println("<h1>Esta es una respuesta desde el Servlet Control</h1>");
             out.println("</body>");
             out.println("</html>");

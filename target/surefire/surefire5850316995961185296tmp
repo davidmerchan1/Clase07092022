@@ -1,8 +1,7 @@
 #surefire
-#Fri Sep 23 19:06:20 CDT 2022
+#Wed Oct 05 16:44:33 CDT 2022
 maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
 user.dir=C\:\\Users\\57321\\Desktop\\clone\\Clase07092022
 file.encoding=UTF-8
 localRepository=C\:\\Users\\57321\\.m2\\repository
-netbeans.deploy=true
 basedir=C\:\\Users\\57321\\Desktop\\clone\\Clase07092022

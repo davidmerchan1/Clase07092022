@@ -24,11 +24,15 @@
      <div class="contenedor">
  
          <div class="input-contenedor">
-         <input type="text" placeholder="Nombres" name="txt_nombres">
+         <input type="text" placeholder="Nombre" name="txt_nombres">
          </div>
          
          <div class="input-contenedor">
-         <input type="text" placeholder="Apellidos" name="txt_apellidos">
+         <input type="text" placeholder="Telefono" name="txt_telefono">
+         </div>
+         
+         <div class="input-contenedor">
+         <input type="text" placeholder="Correo" name="txt_correo">
          </div>
          
           
