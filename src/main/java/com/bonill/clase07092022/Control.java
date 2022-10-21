@@ -6,6 +6,7 @@ package com.bonill.clase07092022;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author administradorPC
  */
 public class Control extends HttpServlet {
-
+   
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -27,7 +28,7 @@ public class Control extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -56,25 +57,34 @@ public class Control extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
-        String n= request.getParameter("txt_nombres");
-        String t=request.getParameter("txt_telefono");
-        String c=request.getParameter("txt_correo");
+       
+        String n = request.getParameter("txt_nombres");
+        String t = request.getParameter("txt_telefono");
+        String c = request.getParameter("txt_correo");
+        String a = request.getParameter("txt_contra");
+        personaDTO persona = new personaDTO(n,t,c,a);
         response.setContentType("text/html;charset=UTF-8");
+       
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Respuestas</title>");            
+            out.println("<title>respuesta 1</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Nombre: "+n+"</h1>");
-            out.println("<h1>Telefono: "+t+"</h1>");
-            out.println("<h1>Correo: "+c+"</h1>");
+            out.println("<h1>El Mensaje ha sido enviado: "+persona.toString()+"</h1>");
             out.println("<h1>Esta es una respuesta desde el Servlet Control</h1>");
             out.println("</body>");
             out.println("</html>");
         }
+        personaDAO dao = new personaDAO();
+        List<personaDTO> lista = dao.readAll();
+        for(personaDTO i : lista){
+            System.out.println(i.toString());
+
+        }
+        
     }
 
     /**
@@ -88,7 +98,7 @@ public class Control extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            processRequest(request, response);  
     }
 
     /**
@@ -101,5 +111,5 @@ public class Control extends HttpServlet {
         return "Short description";
     }// </editor-fold>
     
-
+    
 }

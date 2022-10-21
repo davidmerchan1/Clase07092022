@@ -35,6 +35,12 @@
          <input type="text" placeholder="Correo" name="txt_correo">
          </div>
          
+         <div class="input-contenedor">
+         <input type="text" placeholder="contraseña" name="txt_contra">
+         </div>
+         
+         
+         
           
          <input type="submit" name="btn_registrar" class="button" value="Registrar"/>
 
