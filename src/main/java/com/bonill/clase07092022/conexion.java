@@ -28,17 +28,17 @@ public class conexion {
 
     public conexion() {
         this.conectar = null;
-        this.BD = "bd_merchan";
-        this.usuario = "postgres";
-        this.contra = "123456789";
+        this.BD = "dbvclstp9ma9s9";
+        this.usuario = "qavlwuiejdpjbi";
+        this.contra = "6ce2b63815973f78d3fddc718ee6ddea3f83536e9793b575322d0a59f751d101";
     }
 
     public void conectar() {
         try {
             Class.forName("org.postgresql.Driver");
-            this.BD = "jdbc:postgresql://127.0.0.1:5432/bd_merchan";
-            this.usuario = "postgres";
-            this.contra = "123456789";
+            this.BD = "jdbc:postgresql://ec2-3-220-207-90.compute-1.amazonaws.com:5432/dbvclstp9ma9s9";
+            this.usuario = "qavlwuiejdpjbi";
+            this.contra = "6ce2b63815973f78d3fddc718ee6ddea3f83536e9793b575322d0a59f751d101";
             this.conectar = (Connection) DriverManager.getConnection(BD, usuario, contra);
         } catch (ClassNotFoundException | HeadlessException | SQLException e) {
 
@@ -59,4 +59,6 @@ public class conexion {
         return instancia;
     }
 }
+
+
 
